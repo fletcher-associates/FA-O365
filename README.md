@@ -1,8 +1,8 @@
-## O365
+# O365
 Custom tools and controllers for O365 management
 
-# Tools
+## Tools
 Perform discrete tasks: Get-, Set-, Add-, etc.
 
-# Controllers
+## Controllers
 Scripts that connect Tools together to perform more complex processes.
