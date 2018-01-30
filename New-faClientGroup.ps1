@@ -14,16 +14,15 @@ This command retrieved clients from the client list and creates new unified grou
 
 #>
 
-
 #Note there is a 64-character limit on UnifiedGroup -Name property which need to be set in the list.
 
-$items = (Get-PnPListItem -List "Clients").FieldValues | Select-Object -First 5
+$items = (Get-PnPListItem -List "Clients").FieldValues
 
 Foreach ($item in $items) {
 
     #If statement to prevent duplicates
     if ((Get-UnifiedGroup).Alias -contains $item.BSS_x0020_No_x002e_) {
-        Write-Host OPERATION SKIPPED $item.Client_x0020_No already exists.
+        Write-Output "OPERATION SKIPPED $($item.Client_x0020_No) $($item.Company) already exists."
 
     } else {
         $parameters = @{
