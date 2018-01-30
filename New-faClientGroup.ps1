@@ -22,7 +22,7 @@ Foreach ($item in $items) {
 
     #If statement to prevent duplicates
     if ((Get-UnifiedGroup).Alias -contains $item.BSS_x0020_No_x002e_) {
-        Write-Output "OPERATION SKIPPED $($item.Client_x0020_No) $($item.Company) already exists."
+        Write-Output "OPERATION SKIPPED $($item.BSS_x0020_No_x002e_) $($item.Company) already exists."
 
     } else {
         $parameters = @{
