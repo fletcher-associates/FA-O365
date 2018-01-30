@@ -18,12 +18,12 @@ Connect-MsolService -Credential $credential
 # Connect to SharePoint Online
 Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking
 Connect-SPOService -Url https://fletchersonline-admin.sharepoint.com -Credential $credential
-#Verification: Get-SPOSite
+# Verification: Get-SPOSite
 
 # Connect to Skype for Business Online
-Import-Module SkypeOnlineConnector
-$sfboSession = New-CsOnlineSessioN -Credential $credential
-Import-PSSession $sfboSession
+#Import-Module SkypeOnlineConnector
+#$sfboSession = New-CsOnlineSessioN -Credential $credential
+#Import-PSSession $sfboSession
 
 # Connect to Exchange Online
 $exchangeSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "https://outlook.office365.com/powershell-liveid" -Credential $credential -Authentication Basic -AllowRedirection
@@ -33,5 +33,3 @@ Import-PSSession $exchangeSession -DisableNameChecking
 # Connect to Security & Compliance Centre
 $ccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $credential -Authentication Basic -AllowRedirection
 Import-PSSession $ccSession -Prefix cc
-
-Write-Host "Connected to Office 365 Services" -ForegroundColor Green
