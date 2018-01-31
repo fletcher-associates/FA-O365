@@ -15,7 +15,7 @@ TODO
 
 #Gets all unifiedgroups excluding main 'admin' site.
 $groups = Get-UnifiedGroup #-Filter {[Alias] -like "BSS-*"}
-$clients = Get-PnPListItem -List "Clients"
+$clients = Get-PnPListItem -List 'Clients' | Where-Object {$_.FieldValues.Client_x0020_Site -eq $null}
 
 Foreach ($client in $clients) {
     if ($groups.Alias -contains $client.FieldValues.BSS_x0020_No_x002e_) {
