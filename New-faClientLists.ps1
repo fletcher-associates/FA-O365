@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Enter a brief description of what it does
+Adds document libraries to client group sites.
 .DESCRIPTION
 Give a more detailed and fuller description of what it does. Elaborate on usage scenarios, limitations, prerequisites and cross-refer to other similar scripts as necessary where there could be confusion. 
 .PARAMETER ParameterName

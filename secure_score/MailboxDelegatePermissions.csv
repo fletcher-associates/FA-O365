@@ -1,0 +1,10 @@
+#TYPE Deserialized.Microsoft.Exchange.Management.RecipientTasks.MailboxAcePresentationObject
+"PSComputerName","RunspaceId","PSShowComputerName","AccessRights","Deny","InheritanceType","User","Identity","IsInherited","IsValid","ObjectState"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","peter.fletcher@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","carl.hickman@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","charlie.rumsey@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","mike.kirby@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","bradley.hopkins@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","john.taylor@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","ryan.owen@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
+"outlook.office365.com","3ab6f641-cb37-487d-90f2-ffa71eef5d2b","False","FullAccess","False","All","kurt.dolman@fletcher-associates.co.uk","Fletcher Associates Mailbox","False","True","Unchanged"
