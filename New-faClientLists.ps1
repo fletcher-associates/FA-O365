@@ -2,7 +2,7 @@
 .SYNOPSIS
 Adds document libraries to client group sites.
 .DESCRIPTION
-Give a more detailed and fuller description of what it does. Elaborate on usage scenarios, limitations, prerequisites and cross-refer to other similar scripts as necessary where there could be confusion. 
+Give a more detailed and fuller description of what it does. Elaborate on usage scenarios, limitations, prerequisites and cross-refer to other similar scripts as necessary where there could be confusion.
 .PARAMETER ParameterName
 Give details of parameter and how its used
 .PARAMETER ParameterName
@@ -14,7 +14,6 @@ Give a usage example with explanation
 #>
 [CmdletBinding()]
 
-$credential = Get-Credential
 $sites = Get-UnifiedGroup -Identity 'BSS-*'
 
 #   LIST TEMPLATES
@@ -42,7 +41,7 @@ $librarynames = (
 #FOR THE LIBRARIES
 
 foreach ($site in $sites) {
-    Connect-PnPOnline -url $site.SharePointSiteUrl -Credentials $credential
+    Connect-PnPOnline -url $site.SharePointSiteUrl -UseWebLogin
     foreach ($libraryname in $librarynames) {
         $libraryparameters = @{
             'EnableVersioning' = $true ;
@@ -70,7 +69,7 @@ foreach ($site in $sites) {
 #    }#end foreach
 #}#end foreach
 
-#New-PnPList -OnQuickLaunch -Template 100 -Title 
+#New-PnPList -OnQuickLaunch -Template 100 -Title
 
 
 
