@@ -30,13 +30,14 @@ Foreach ($item in $items) {
             'AccessType' = 'Private' ;
             'Alias' = $item.BSS_x0020_No_x002e_ ;
             'DisplayName' = $item.Company ;
-            #'EmailAddresses' = $item.EmailAlias ; <---this column needs adding to the client list - or do with set-unifiedgroup 
-            'Language' = (Get-Culture) ; 
-            'Name' = $item.Company ;
+            #'EmailAddresses' = $item.EmailAlias ; <---this column needs adding to the client list - or do with set-unifiedgroup
+            'Language' = (Get-Culture) ;
             #'Notes' = $null ; <---this needs adding
             'Owner' = 'mike.kirby@fletcher-associates.co.uk'
         }#end parameters
-        New-UnifiedGroup @parameters         
+        New-UnifiedGroup @parameters
     }#end if
 }#end foreach
 
+
+<View><Query><Where><IsNull><FieldRef Name='Client Group Site' /></IsNull></Where></Query></View>
