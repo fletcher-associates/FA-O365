@@ -14,7 +14,6 @@ Give a usage example with explanation
 #>
 [CmdletBinding()]
 
-$credential = Get-Credential
 $sites = Get-UnifiedGroup -Identity 'BSS-*'
 
 #   LIST TEMPLATES
