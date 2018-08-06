@@ -38,6 +38,3 @@ Foreach ($item in $items) {
         New-UnifiedGroup @parameters
     }#end if
 }#end foreach
-
-
-<View><Query><Where><IsNull><FieldRef Name='Client Group Site' /></IsNull></Where></Query></View>
