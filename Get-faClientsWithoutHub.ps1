@@ -1,10 +1,23 @@
+<#
+.SYNOPSIS
+Returns a list of client group sites that are not associated with the 'FletcherAssociates' hub-site.
+.DESCRIPTION
+Give a more detailed and fuller description of what it does. Elaborate on usage scenarios, limitations, prerequisites and cross-refer to other similar scripts as necessary where there could be confusion.
+.PARAMETER ParameterName
+Give details of parameter and how its used.
+.PARAMETER ParameterName
+(repeat as required)
+.EXAMPLE
+Give a usage example with explanation.
+.EXAMPLE
+(repeat as required)
+#>
+
 $clients = Get-SPOSite -Filter {Url -like "*/sites/BSS-*"}
 
 foreach ($client in $clients) {
     $client.HubSiteId
 }
-
-
 
 # Guid for Fletcher Associates ADMIN HubSite: 502fccfc-3467-48eb-917f-b475e5c7c909
 
@@ -38,10 +51,6 @@ foreach($site in $clientSites)
         $noninheritingSites += $aSite
     }#end if
 }#end foreach
-
-
-
-
 
 
 

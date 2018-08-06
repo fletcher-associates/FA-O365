@@ -1,8 +1,8 @@
 ﻿<#
 .SYNOPSIS
-Enter a brief description of what it does
+Sets the default view for document libraries.
 .DESCRIPTION
-Give a more detailed and fuller description of what it does. Elaborate on sage scenarios, limitations, prerequisites and cross-refer to other similar scripts as necessary where there could be confusion.
+This replaces the default view with a view which adds the Enterprise Keyword column.
 .PARAMETER ParameterName
 Give details of parameter and how its used
 .PARAMETER ParameterName

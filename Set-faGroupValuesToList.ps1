@@ -2,13 +2,13 @@
 .SYNOPSIS
 Writes values from client Unified Group properties back to the client list. i.e. SharePoint Site URL.
 .DESCRIPTION
-TODO
+Give a more detailed and fuller description of what it does. Elaborate on usage scenarios, limitations, prerequisites and cross-refer to other similar scripts as necessary where there could be confusion.
 .PARAMETER ParameterName
-TODO
+Give details of parameter and how its used.
 .PARAMETER ParameterName
 (repeat as required)
 .EXAMPLE
-TODO
+Give a usage example with explanation.
 .EXAMPLE
 (repeat as required)
 #>

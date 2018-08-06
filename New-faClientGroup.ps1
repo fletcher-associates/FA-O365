@@ -10,7 +10,7 @@ This command retrieves clients from the client list and provisions unified group
 .EXAMPLE
 New-faClientGroup
 
-This command retrieved clients from the client list and creates new unified groups for those that do not have one.
+This command retrieves clients from the client list and creates new unified groups for those that do not have one.
 
 #>
 
