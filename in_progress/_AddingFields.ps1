@@ -30,3 +30,8 @@ foreach ($column in $columns) {
 
 }#end foreach
 
+
+if (!$column) {
+ 
+}
+
