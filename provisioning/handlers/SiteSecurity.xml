@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.1.1809.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-3845A32CA6E542BFB6EE2A3507B1F20D">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-3845A32CA6E542BFB6EE2A3507B1F20D" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Security>
+        <pnp:AdditionalAdministrators>
+          <pnp:User Name="c:0o.c|federateddirectoryclaimprovider|682a8f45-3d41-4073-abb0-9238e10c3707_o" />
+          <pnp:User Name="i:0#.f|membership|mike.kirby@fletcher-associates.co.uk" />
+        </pnp:AdditionalAdministrators>
+        <pnp:AdditionalOwners>
+          <pnp:User Name="c:0o.c|federateddirectoryclaimprovider|682a8f45-3d41-4073-abb0-9238e10c3707_o" />
+        </pnp:AdditionalOwners>
+        <pnp:AdditionalMembers>
+          <pnp:User Name="c:0o.c|federateddirectoryclaimprovider|682a8f45-3d41-4073-abb0-9238e10c3707" />
+        </pnp:AdditionalMembers>
+        <pnp:Permissions />
+      </pnp:Security>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

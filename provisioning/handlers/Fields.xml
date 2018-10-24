@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.1.1809.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-F2BF7657717E4453873BA6B81F3B51B6">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-F2BF7657717E4453873BA6B81F3B51B6" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:SiteFields>
+        <Field ID="{36193413-DD5C-4096-8C1E-1B40098B9BA3}" Name="_OriginalSourceSiteId" StaticName="_OriginalSourceSiteId" DisplayName="Original Source Site ID" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field ID="{0E7B982F-698A-4D0C-AACB-F16906F66D30}" Name="_OriginalSourceUrl" StaticName="_OriginalSourceUrl" DisplayName="Original Source Url" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field ID="{91E86A43-75F2-426F-80DA-35EDFB47D55D}" Name="_OriginalSourceItemId" StaticName="_OriginalSourceItemId" DisplayName="Original Source Item ID" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field ID="{139DA674-DBF6-439F-98E0-4EB05FA9A669}" Name="_OriginalSourceListId" StaticName="_OriginalSourceListId" DisplayName="Original Source List ID" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field ID="{3477A5BC-C605-4B2E-A7C1-8DB8F13C017E}" Name="_OriginalSourceWebId" StaticName="_OriginalSourceWebId" DisplayName="Original Source Web ID" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field ID="{6C5CC2D0-706C-4BC2-9549-F774A75D5488}" Name="UserExpiration" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="UserExpiration" Group="_Hidden" DisplayName="User Expiration" ReadOnly="TRUE" ReadOnlyEnforced="TRUE" Type="DateTime" FromBaseType="TRUE" />
+        <Field ID="{1A7348E7-1BB7-4A47-9790-088E7CB20B58}" Name="_AuthorByline" StaticName="_AuthorByline" DisplayName="Author Byline" Type="UserMulti" Mult="TRUE" List="UserInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field ID="{D60D65FF-FF42-4044-A684-AC3F7A5E598C}" Name="_TopicHeader" StaticName="_TopicHeader" DisplayName="Topic header" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+      </pnp:SiteFields>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

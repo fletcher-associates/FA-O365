@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.1.1809.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-474C1B5D4A274B909A4AD9D771496FEF">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-474C1B5D4A274B909A4AD9D771496FEF" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="false" />
+        </pnp:GlobalNavigation>
+        <pnp:CurrentNavigation NavigationType="StructuralLocal">
+          <pnp:StructuralNavigation RemoveExistingNodes="false">
+            <pnp:NavigationNode Title="Home" Url="{site}" />
+            <pnp:NavigationNode Title="Recent" Url="{site}" />
+            <pnp:NavigationNode Title="Management" Url="{site}/Management" />
+            <pnp:NavigationNode Title="Employees" Url="{site}/Employees" />
+            <pnp:NavigationNode Title="Work Activities" Url="{site}/WorkActivities" />
+            <pnp:NavigationNode Title="Work Equipment" Url="{site}/WorkEquipment" />
+            <pnp:NavigationNode Title="Substances" Url="{site}/Substances" />
+            <pnp:NavigationNode Title="Workplaces" Url="{site}/Workplaces" />
+            <pnp:NavigationNode Title="HR" Url="{site}/HR" />
+            <pnp:NavigationNode Title="Quality" Url="{site}/Quality" />
+          </pnp:StructuralNavigation>
+        </pnp:CurrentNavigation>
+      </pnp:Navigation>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

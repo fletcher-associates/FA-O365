@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.1.1809.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-CAA8F69E74D74DF68C571F79EBBEC2F1">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-CAA8F69E74D74DF68C571F79EBBEC2F1" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:PropertyBagEntries>
+        <pnp:PropertyBagEntry Key="SiteCollectionGroupId543d5e1d-c19b-466b-924a-2f0224d6175f" Value="9c81ea4c-3e16-4116-a7fd-5ff14e452a74" Overwrite="false" />
+      </pnp:PropertyBagEntries>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

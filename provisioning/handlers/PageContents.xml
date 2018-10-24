@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.1.1809.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-CCA3C0DFC3684E0DA14676DBE5A1BF38">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-CCA3C0DFC3684E0DA14676DBE5A1BF38" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:WebSettings NoCrawl="false" WelcomePage="SitePages/Home.aspx" />
+      <pnp:ClientSidePages>
+        <pnp:ClientSidePage PageName="Home.aspx" PromoteAsNewsArticle="false" Overwrite="true" Layout="Home" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="NewsReel" JsonControlData="{ &quot;dataVersion&quot;: &quot;1.2&quot;, &quot;properties&quot;: {&quot;showChrome&quot;:true,&quot;layoutId&quot;:&quot;FeaturedNews&quot;,&quot;prefetchCount&quot;:4,&quot;newsDataSourceProp&quot;:1,&quot;dataProviderId&quot;:&quot;viewCounts&quot;,&quot;newsSiteList&quot;:[],&quot;renderItemsSliderValue&quot;:4,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;}}" ControlId="a5df8fdf-b508-4b66-98a6-d83bc2597f63" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="SiteActivity" JsonControlData="{ &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;maxItems&quot;:8}}" ControlId="eb95c819-ab8f-4689-bd03-0c2d65d47b1f" Order="2" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" />
+        </pnp:ClientSidePage>
+      </pnp:ClientSidePages>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
