@@ -1,4 +1,4 @@
-$groups = Get-UnifiedGroup -Filter {Alias -like 'BSS-*'}
+$groups = Get-UnifiedGroup -Filter {[Alias] -like 'BSS-*'}
 $staff = Get-UnifiedGroupLinks -Identity FletcherAssociates -LinkType Members
 
 foreach ($group in $groups) {
@@ -12,6 +12,7 @@ foreach ($group in $groups) {
         $_.DisplayName -notmatch 'Everyone' -and
         $_.DisplayName -notmatch 'Everyone except external users' -and
         $_.DisplayName -notmatch 'SharePoint App' -and
-        $_.DisplayName -notlike '*_spocrwl_*'
+        $_.DisplayName -notlike '*_spocrwl_*' -and
+        $_.DisplayName -notlike '*_spocrawler_*'
     } #end filterscript
 } #end foreach
