@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/07/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.3.1811.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-3925707FD66F4734BC9DD6D52248CFC4">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-3925707FD66F4734BC9DD6D52248CFC4" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="User Access Requests" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/UserAccessRequests" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/UserAccessRequests/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/UserAccessRequests/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/UserAccessRequests/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=45" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{2D3E5ACC-2B05-4FBC-AAEB-71824EE8C35D}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/BSS-XXX/Lists/UserAccessRequests/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=45">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="FullName" />
+                <FieldRef Name="JobTitle" />
+                <FieldRef Name="EMail" />
+                <FieldRef Name="WorkPhone" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3a6b296c-3f50-445c-a13f-9c679ea9dda3" Name="ComplianceAssetId" DisplayName="Compliance Asset Id" />
+            <pnp:FieldRef ID="475c2610-c157-4b91-9e2d-6855031b3538" Name="FullName" Required="true" DisplayName="Full Name" />
+            <pnp:FieldRef ID="c4e0f350-52cc-4ede-904c-dd71a3d11f7d" Name="JobTitle" DisplayName="Job Title" />
+            <pnp:FieldRef ID="fce16b4c-fe53-4793-aaab-b4892e736d15" Name="EMail" Required="true" DisplayName="E-Mail" />
+            <pnp:FieldRef ID="fd630629-c165-4513-b43c-fdb16b86a14d" Name="WorkPhone" DisplayName="Business Phone" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Retention label" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Retention label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://0-uksouth21.pushp.svc.ms/notifications?token=w0-b8867f43-ae3c-41bd-acea-c01b6e5cd10f" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://0-uksouth21.pushp.svc.ms/notifications?token=w0-49de16c6-1146-4dd2-831f-c0c197878481" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
