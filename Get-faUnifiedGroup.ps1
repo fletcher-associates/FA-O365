@@ -1,11 +1,11 @@
 <### WORK TO DO ###
 Check connection to Exchange online before running command using [ValidateScript()] 
 Add additional filter parameters
+#AddRequires -Module Microsoft.Exchange.Management.ExoPowershellModule
 Make it work without specifying -Filter parameter
 ##################>
 
-#Requires -Module Microsoft.Exchange.Management.ExoPowershellModule
-
+Function Get-faUnifiedGroup {
 <#
 .SYNOPSIS
     This returns Unified Groups according to custom filter criteria.
@@ -27,25 +27,46 @@ Make it work without specifying -Filter parameter
         InactiveClients - will return client groups that are marked as inactive in the client list
 #>
 
-Function Get-faUnifiedGroup {
     [CmdletBinding()]
     param (
         [Parameter()]
         [ValidateSet('Clients', 'Other', 'Dev')]
         [string]$Filter
     )
-    try {
-        switch ($Filter) {
-            'Clients' { $filterscript = '{Alias -like "BSS-*"}' }
-            'Other' { $filterscript = '{Alias -notlike "BSS-*"}' }
-            'Dev' { $filterscript = '{Alias -like "dev-*"}' }
-#            'ActiveClients' { } 
-#            'InactiveClients' { }
-#            'FirstRelease' { }
-        }
-        Get-UnifiedGroup -Filter $filterscript
-    }
-    catch {
-        Write-Error -Message 'This is an error'
-    }
-} #end function
+
+    BEGIN{}#begin
+
+    PROCESS{
+        try {
+            if ($PSBoundParameters.ContainsKey('Filter')) {
+                
+                switch ($Filter) {
+                    'Clients' { $filterscript = '{Alias -like "BSS-*"}' }
+                    'Other' { $filterscript = '{Alias -notlike "BSS-*"}' }
+                    'Dev' { $filterscript = '{Alias -like "dev-*"}' }
+#                   'ActiveClients' { } 
+#                   'InactiveClients' { }
+#                   'FirstRelease' { }
+                }#switch
+                
+                $groups = Get-UnifiedGroup -Filter $filterscript
+
+            } else {
+
+                $groups = Get-UnifiedGroup
+                
+            }#if/esle
+
+            Write-Output $groups
+    
+        } catch {
+    
+            Write-Error -Message 'This is an error'
+    
+        }#try/catch
+
+    }#process
+
+    END{}#end
+
+}#function
