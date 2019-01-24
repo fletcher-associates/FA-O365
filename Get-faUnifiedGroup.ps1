@@ -43,7 +43,7 @@ Function Get-faUnifiedGroup {
                 switch ($Filter) {
                     'Clients' { $filterscript = '{Alias -like "BSS-*"}' }
                     'Other' { $filterscript = '{Alias -notlike "BSS-*"}' }
-                    'Dev' { $filterscript = '{Alias -like "dev-*"}' }
+                    'Dev' { $filterscript = '{Alias -like "DEV-*"}' }
 #                   'ActiveClients' { } 
 #                   'InactiveClients' { }
 #                   'FirstRelease' { }
