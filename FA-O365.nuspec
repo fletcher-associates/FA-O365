@@ -5,7 +5,6 @@
     <version>1.0.0</version>
     <authors>Mike Kirby</authors>
     <owners>Mike Kirby</owners>
-    <licenseUrl>https://github.com/fletcher-associates/FA-O365</licenseUrl>
     <projectUrl>https://github.com/fletcher-associates/FA-O365</projectUrl>
     <iconUrl>https://github.com/organizations/fletcher-associates/settings/profile</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,8 +12,5 @@
     <releaseNotes>First release to Azure DevOps.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>Office365 SharePoint Exchange PowerShell</tags>
-    <dependencies>
-      <dependency id="SampleDependency" version="1.0" />
-    </dependencies>
   </metadata>
 </package>
