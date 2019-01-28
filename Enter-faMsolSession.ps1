@@ -17,16 +17,14 @@ Give a usage example with explanation.
 (repeat as required)
 #>
 
-# Create credentials object
-$credential = Get-Credential
-
 # Connect to Office 365
-Import-Module MsOnline
-Connect-MsolService -Credential $credential
+Connect-MsolService
 # Verification: Get-MsolDomain
 
+# Connect to Exchange Online
+# Call Connect-faEXOPSSession.ps here!
+
 # Connect to SharePoint Online
-Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking
 Connect-SPOService -Url https://fletchersonline-admin.sharepoint.com -Credential $credential
 # Verification: Get-SPOSite
 
@@ -34,11 +32,6 @@ Connect-SPOService -Url https://fletchersonline-admin.sharepoint.com -Credential
 #Import-Module SkypeOnlineConnector
 #$sfboSession = New-CsOnlineSessioN -Credential $credential
 #Import-PSSession $sfboSession
-
-# Connect to Exchange Online
-$exchangeSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "https://outlook.office365.com/powershell-liveid" -Credential $credential -Authentication Basic -AllowRedirection
-Import-PSSession $exchangeSession -DisableNameChecking
-# Verification: Get-AcceptedDomain | Format-List -Property DomainName
 
 # Connect to Security & Compliance Centre
 $ccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $credential -Authentication Basic -AllowRedirection
