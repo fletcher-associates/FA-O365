@@ -1,0 +1,3 @@
+#TYPE Selected.System.Management.Automation.PSCustomObject
+"DisplayName","ForwardingAddress","ForwardingSmtpAddress","DeliverToMailboxAndForward"
+"Fletcher Associates",,"smtp:mailbox@fletcher-associates.co.uk","False"

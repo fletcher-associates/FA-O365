@@ -8,16 +8,24 @@
     User already exists
     
 #>
-
-
 ######
-SPLIT THIS OUT TO SITE PROVISIONING SCRIPT
+#SPLIT THIS OUT TO SITE PROVISIONING SCRIPT
+#Use provisioning template to add access request list
+$templatepath = '.\provisioning\2019-01-15_UserAccessRequestsList.xml'
+
+foreach ($group in $groups) {
+    Connect-PnPOnline -Url $group.SharePointSiteUrl -UseWebLogin
+    Apply-PnPProvisioningTemplate -Path $templatepath
+}
+
 
 #Get the group
-$group = Get-UnifiedGroup -Filter { Alias -like "DEV-108" }
+#$group = Get-UnifiedGroup -Filter { [Alias] -like "DEV-108" }
+#Use Get-faUnifiedGroup
 
 #Connect to group site
 Connect-PnPOnline -Url $group.SharePointSiteUrl -UseWebLogin
+
 
 #Add new permission level
 Add-PnPRoleDefinition -RoleName 'Limited Read' -Clone Read -Exclude ViewVersions -Description 'Based on Read but excludes ViewVersions'
@@ -29,12 +37,12 @@ Set-PnPGroupPermissions -Identity ($group.DisplayName +' Client Users') -AddRole
 ######
 
 #Get users from list
-$users = Get-PnPListItem -List 'User Access Request (Custom List)'
+$users = Get-PnPListItem -List 'User Access Requests'
 
 #Add external users to SharePoint Group
 #NEEDS A MESSAGE FOR THE EMAIL BODY#
 foreach ($user in $users) {
-    Add-PnPUserToGroup -EmailAddress $user.FieldValues.EMail -Identity "$($group.DisplayName) Client Users" -SendEmail $true -EmailBody 'Message'
+    Add-PnPUserToGroup -Identity "$($group.DisplayName) Client Users" -EmailAddress $user.FieldValues.EMail -SendEmail
 }#end foreach
 
 ######
