@@ -38,6 +38,3 @@ $SMTPForwarding = Get-Mailbox -ResultSize Unlimited | Select-Object DisplayName,
 $UserInboxRules | Export-Csv MailForwardingRulesToExternalDomains.csv
 $UserDelegates | Export-Csv MailboxDelegatePermissions.csv
 $SMTPForwarding | Export-Csv Mailboxsmtpforwarding.csv
-
-
-
