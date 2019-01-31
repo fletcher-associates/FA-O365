@@ -2,20 +2,19 @@
 <package >
   <metadata>
     <id>faO365</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>Mike Kirby</authors>
     <owners>Fletcher Associates Ltd</owners>
     <projectUrl>https://github.com/fletcher-associates/FA-O365</projectUrl>
     <iconUrl>https://github.com/organizations/fletcher-associates/settings/profile</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Powershell module with custom cmdlets for managing our Office 365 tenant.</description>
-    <releaseNotes>First release to Azure DevOps. Package metadata added.</releaseNotes>
+    <releaseNotes>Remove secure score cmdlets for troubleshooting.</releaseNotes>
     <copyright>Copyright 2019 Fletcher Associates Ltd. All rights reserved.</copyright>
     <tags>Office365 SharePoint Exchange PowerShell</tags>
   </metadata>
   <files>
     <file src="faO365.psd1" target="" />
     <file src="Functions\**.ps1" target="Functions" />
-    <file src="SecureScore\**.ps1" target="SecureScore" />
   </files>
 </package>
