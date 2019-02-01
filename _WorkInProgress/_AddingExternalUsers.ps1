@@ -8,6 +8,7 @@
     User already exists
     
 #>
+
 ######
 #SPLIT THIS OUT TO SITE PROVISIONING SCRIPT
 #Use provisioning template to add access request list
@@ -18,23 +19,13 @@ foreach ($group in $groups) {
     Apply-PnPProvisioningTemplate -Path $templatepath
 }
 
-
+######
 #Get the group
 #$group = Get-UnifiedGroup -Filter { [Alias] -like "DEV-108" }
 #Use Get-faUnifiedGroup
 
 #Connect to group site
 Connect-PnPOnline -Url $group.SharePointSiteUrl -UseWebLogin
-
-
-#Add new permission level
-Add-PnPRoleDefinition -RoleName 'Limited Read' -Clone Read -Exclude ViewVersions -Description 'Based on Read but excludes ViewVersions'
-
-#Add new group and assign permission level
-New-PnPGroup -Title ($group.DisplayName + ' Client Users') -Description 'Group for Client users'
-Set-PnPGroupPermissions -Identity ($group.DisplayName +' Client Users') -AddRole 'Limited Read'
-
-######
 
 #Get users from list
 $users = Get-PnPListItem -List 'User Access Requests'
