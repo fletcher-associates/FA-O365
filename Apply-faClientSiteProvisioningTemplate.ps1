@@ -1,18 +1,39 @@
 function Apply-faClientSiteProvisioningTemplate {
+    [CmdletBinding()]
+    #Test to make sure pipeline input works
     param(
-        [Parameter()]
-        [string]$templatepath = 'C:\Users\mikek\OneDrive\Git\FA-O365\provisioning\BSS239_2018_10_11_Regional.xml',
+        [Parameter(Mandatory = $true,
+                   ValueFromPipelineByPropertyName=$true)]
+        [string]$Site,
 
-        [Parameter()]
-        [string]$site = (Get-UnifiedGroup -Filter {[Alias] -like "BSS-*"})
+        [Parameter(Mandatory=$true)]
+        [string]$TemplatePath
     )
 
-    foreach ($s in $site) {
+    BEGIN{}#begin
 
-        Write-Verbose "Applying provisioning template to $s"
-        Connect-PnPOnline -Url $s.SharePointSiteUrl -UseWebLogin
-        Apply-PnPProvisioningTemplate -Path $templatepath
-    
-    }#foreach
+    PROCESS{
+
+        foreach ($S in $Site) {
+
+            Write-Verbose "Connecting to $S.Url"
+
+            Connect-PnPOnline -Url $S.Url -UseWebLogin
+
+            Write-Verbose "Applying provisioning template to $S.Url"
+
+            $parameters = @{
+                'Path' = $TemplatePath ;
+                'ClearNavigation' = $true ;
+                'ExcludeHandlers' = 'SiteSecurity'
+            }#parameters
+
+            Apply-PnPProvisioningTemplate @parameters
+        
+        }#foreach
+
+    }#process
+
+    END{}#end
 
 }#function
