@@ -51,14 +51,14 @@ Function Get-faClientListItem {
 
     PROCESS{
 
-        Write-Verbose "[PROCESS] Establishing connection to $SiteUrl"
-        if ((Get-PnPConnection).Url -eq $SiteUrl) {
-            Write-Verbose "Already connected to $SiteUrl"
-        } else {
-            #TODO Might be better using Write-Warning here?
-            Write-Verbose "No connection to $SiteUrl - attempting connection"
-            Connect-PnPOnline -Url $siteurl -UseWebLogin
-        }#if/else
+        try {
+            Write-Verbose "[PROCESS] Checking for connection to $siteUrl"
+            Get-PnPConnection | Where-Object -Property Url -eq $SiteUrl | Out-Null
+        }
+        catch {
+            Write-Verbose "[PROCESS] No connection to $SiteUrl - attempting connection"
+            Connect-PnPOnline -Url $SiteUrl -UseWebLogin
+        }
         
         Write-Verbose '[PROCESS] Building filter array for filtescript'
         $FilterArray = New-Object -TypeName System.Collections.Generic.List[string]
